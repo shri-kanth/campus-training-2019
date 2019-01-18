@@ -1,4 +1,4 @@
-Tutorial Git : https://www.atlassian.com/git/tutorials/what-is-version-control
+**Tutorial Git** : https://www.atlassian.com/git/tutorials/what-is-version-control
 
 Only go through the sections :
 * Beginner
@@ -15,7 +15,7 @@ Tutorial GitHub Basic Flow : https://guides.github.com/introduction/flow/
 
 Tutorial GitHub Activity : https://guides.github.com/activities/hello-world/
 
-Exercise  : 
+**Exercise**  : 
 1. Signup and create GitHub account (If you do not have already). 
 2. Create a repository on GitHub (With read-me and git-ignore files).  (By default you will have a 'master' branch created here)
 3. Clone the repository onto your local system

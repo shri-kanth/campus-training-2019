@@ -15,7 +15,7 @@ Question-1 :
 Write a c program, which takes a positive integer as a command line argument and prints an English phrase that describes the integer. Use the short scale system to print the string literals. The program should handle any incorrect usage by printing a message indicating the correct usage and exiting with appropriate exit code. Your program should be able to handle input range from zero to one trillion.
 Example : 
 Input : `1234560`, 
-OutPut :  `One million two hundred and thirty four thousand five hundred and sixty`.
+OutPut :  `One million two hundred and thirty four thousand five hundred and sixty`.  
 ---
 ### Question  2 : 
 

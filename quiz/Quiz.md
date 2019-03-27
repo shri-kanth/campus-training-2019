@@ -10,7 +10,7 @@ Check your submission against various test cases. Your code will be judged based
 
 # Questions :
 
-### Question  1 : 
+### Question-1 : 
 
 Write a c program, which takes a positive integer as a command line argument and prints an English phrase that describes the integer. Use the short scale system to print the string literals. The program should handle any incorrect usage by printing a message indicating the correct usage and exiting with appropriate exit code. Your program should be able to handle input range from zero to one trillion.
 Example : 
@@ -39,7 +39,7 @@ Input : `DAMP`, `LIKE`
 output : `DAMP -> LAMP -> LIMP -> LIME -> LIKE`
 ---
 ### Question 5 :
- 
+
 You are given two arrays, one shorter (with all distinct elements) and one longer array (where elements may or may not be unique). Find the shortest sub-array in the long array that contains all the elements in the shorter array. The order of elements is not important, the Sub-array can contain all the elements of shorter array in any order. Write a C function that takes the two arrays as arguments. And prints the start and end indices of the longer array that represent the required sub-array. Print "Not Possible" if there is no sub-array in the entire long array which contains all the elements present in shorter array.
 Example : 
 Input `{1, 5, 9}` | `{7,5,9,0,2,1,3,5,7,9,1,1,5,8,8,9,7}` 

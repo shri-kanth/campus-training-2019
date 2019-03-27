@@ -8,9 +8,9 @@ Check your submission against various test cases. Your code will be judged based
 * Readability
 * Maintainability
 
-# Questions :
+# Questions :  
 
-### Question-1 : 
+### Question-1 :   
 
 Write a c program, which takes a positive integer as a command line argument and prints an English phrase that describes the integer. Use the short scale system to print the string literals. The program should handle any incorrect usage by printing a message indicating the correct usage and exiting with appropriate exit code. Your program should be able to handle input range from zero to one trillion.
 Example : 

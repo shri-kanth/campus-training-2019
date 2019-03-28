@@ -1,11 +1,27 @@
+/*
+ 
+**Campus Training 2019 Quiz Question 1 Solution**
+
+**Author** : Koraveni Srikanth
+
+**Problem Statement**
+
+Write a c program, which takes a positive integer as a command line argument and prints an English phrase that describes the integer. 
+Use the short scale system to print the string literals. 
+The program should handle any incorrect usage by printing a message indicating the correct usage and exiting with appropriate exit code. 
+Your program should be able to handle input range from zero to one trillion. 
+Example : Input : 1234560, OutPut : One million two hundred and thirty four thousand five hundred and sixty.
+
+*/
+
 #include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-#define OUTPUT_BUFFER_SIZE 50
 #define OUTPUT_SIZE 200
 
+// Helper Function
 int validateInput(int argc, char **argv);
 char *getNumberAsSentence(char *input);
 char *getSingleDigitNumberAsSentence(char *input);
@@ -94,60 +110,67 @@ char *getNumberAsSentence(char *input)
 
 	while (digitsProcessed < length)
 	{
-		int remaining = length-digitsProcessed;
-		
-		int largestBig = (remaining/3);
-		largestBig = remaining%3 == 0 ? largestBig-1 : largestBig;
-		int largestBigSizeCount = remaining%3 == 0 ? 3 : remaining%3;
+		int remaining = length - digitsProcessed;
+
+		int largestBig = (remaining / 3);
+		largestBig = remaining % 3 == 0 ? largestBig - 1 : largestBig;
+		int largestBigSizeCount = remaining % 3 == 0 ? 3 : remaining % 3;
 
 		char *subSentence;
-		
+
 		if (remaining > 3)
-		{ 
-			if(largestBigSizeCount == 1){
-				subSentence = getSingleDigitNumberAsSentence(input+digitsProcessed);
+		{
+			if (largestBigSizeCount == 1)
+			{
+				subSentence = getSingleDigitNumberAsSentence(input + digitsProcessed);
 				digitsProcessed += 1;
-			}else if(largestBigSizeCount == 2){
-				subSentence = getDoubleDigitNumberAsSentence(input+digitsProcessed);
+			}
+			else if (largestBigSizeCount == 2)
+			{
+				subSentence = getDoubleDigitNumberAsSentence(input + digitsProcessed);
 				digitsProcessed += 2;
-			}else if(largestBigSizeCount == 3){
-				subSentence = getThreeDigitNumberAsSentence(input+digitsProcessed);
+			}
+			else if (largestBigSizeCount == 3)
+			{
+				subSentence = getThreeDigitNumberAsSentence(input + digitsProcessed);
 				digitsProcessed += 3;
 			}
 		}
 		else if (remaining == 3)
 		{
-			subSentence = getThreeDigitNumberAsSentence(input+digitsProcessed);
+			subSentence = getThreeDigitNumberAsSentence(input + digitsProcessed);
 			digitsProcessed += 3;
 		}
 		else if (remaining == 2)
 		{
-			subSentence = getDoubleDigitNumberAsSentence(input+digitsProcessed);
+			subSentence = getDoubleDigitNumberAsSentence(input + digitsProcessed);
 			digitsProcessed += 2;
 		}
-		else 
+		else
 		{
-			subSentence = getSingleDigitNumberAsSentence(input+digitsProcessed);
+			subSentence = getSingleDigitNumberAsSentence(input + digitsProcessed);
 			digitsProcessed++;
 		}
-		
-		strcpy(cursor, subSentence);
-		
-		if(remaining > 3){
-			cursor += strlen(subSentence);
-			
-			if(strlen(subSentence)){
-				strcpy(cursor," ");
-			  cursor++;
-				
-				strcpy(cursor,bigs[largestBig]);
-      	cursor += strlen(bigs[largestBig]);
 
-				strcpy(cursor," ");
+		strcpy(cursor, subSentence);
+
+		if (remaining > 3)
+		{
+			cursor += strlen(subSentence);
+
+			if (strlen(subSentence))
+			{
+				strcpy(cursor, " ");
+				cursor++;
+
+				strcpy(cursor, bigs[largestBig]);
+				cursor += strlen(bigs[largestBig]);
+
+				strcpy(cursor, " ");
 				cursor++;
 			}
 		}
-		
+
 		free(subSentence);
 	}
 

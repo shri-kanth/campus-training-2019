@@ -17,7 +17,6 @@ OutPut : {1,3}
 */
 
 #include <stdio.h>
-#include <stdlib.h>
 
 void findSameSumPair(int a[], int sizeA, int b[], int sizeB);
 
